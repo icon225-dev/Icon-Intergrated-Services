@@ -1,0 +1,1610 @@
+/* =========================================
+   ICON INTEGRATED SERVICES
+   MAIN WEBSITE STYLESHEET
+========================================= */
+
+/* GLOBAL SETTINGS */
+
+:root {
+    --navy: #071a35;
+    --navy-light: #102c50;
+    --gold: #c9a44c;
+    --gold-light: #e2c477;
+    --white: #ffffff;
+    --light: #f5f7fa;
+    --dark: #17202d;
+    --grey: #687386;
+    --border: #e3e7ed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================================
+   HEADER AND NAVIGATION
+========================================= */
+
+.header {
+    width: 100%;
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+}
+
+.nav-container {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--white);
+}
+
+.logo-icon {
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.logo-text {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+.logo-text small {
+    display: block;
+    font-size: 9px;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.navbar a {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--gold);
+}
+
+.navbar .nav-button {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 11px 17px;
+    border-radius: 4px;
+}
+
+.navbar .nav-button:hover {
+    background: var(--gold-light);
+    color: var(--navy);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(rgba(4,17,36,0.68), rgba(4,17,36,0.85)),
+        url("images/highway-truck.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(7,26,53,0.85),
+        rgba(7,26,53,0.15)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.15;
+    max-width: 800px;
+    margin-bottom: 22px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-content p {
+    max-width: 620px;
+    font-size: 17px;
+    color: #e2e7ef;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    background: rgba(7,26,53,0.85);
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.btn-dark {
+    background: var(--navy);
+    color: white;
+}
+
+.btn-dark:hover {
+    background: var(--navy-light);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats {
+    background: var(--navy);
+    padding: 45px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 10px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item h2 {
+    color: var(--gold);
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+.stat-item p {
+    color: white;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-label {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: clamp(27px, 4vw, 40px);
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: var(--grey);
+    font-size: 15px;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-image {
+    min-height: 430px;
+    background:
+        linear-gradient(rgba(7,26,53,0.15), rgba(7,26,53,0.7)),
+        url("images/about-company.jpg") center/cover no-repeat;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.about-image-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    color: white;
+}
+
+.about-image-text span {
+    color: var(--gold-light);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.about-image-text h2 {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.about-content h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.about-content p {
+    color: var(--grey);
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.about-content .btn {
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
+.services-section {
+    padding: 100px 0;
+    background: var(--light);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: white;
+    padding: 32px 23px;
+    border-radius: 6px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.04);
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(7,26,53,0.1);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    background: #f8f1df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    margin-bottom: 23px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--grey);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.services-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.page-hero {
+    background:
+        linear-gradient(rgba(7,26,53,0.92), rgba(7,26,53,0.85)),
+        url("images/highway-truck.jpg") center/cover no-repeat;
+    padding: 100px 0;
+    color: white;
+}
+
+.page-hero h1 {
+    font-size: clamp(35px, 5vw, 54px);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.page-hero p {
+    max-width: 650px;
+    color: #d8dfeb;
+    font-size: 15px;
+}
+
+.breadcrumb {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    font-size: 12px;
+    color: var(--gold-light);
+}
+
+.breadcrumb a {
+    color: white;
+}
+
+
+/* =========================================
+   MISSION AND VALUES
+========================================= */
+
+.mission-section,
+.values-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.purpose-card {
+    border-top: 3px solid var(--gold);
+}
+
+.values-section {
+    background: var(--light);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.value-item {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 5px;
+}
+
+.value-item > span {
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.value-item h3 {
+    color: var(--navy);
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.value-item p {
+    color: var(--grey);
+    font-size: 13px;
+}
+
+
+/* =========================================
+   SERVICE DETAIL PAGES
+========================================= */
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.service-detail:last-child {
+    margin-bottom: 0;
+}
+
+.service-detail.reverse .service-detail-image {
+    order: 2;
+}
+
+.service-detail.reverse .service-detail-content {
+    order: 1;
+}
+
+.service-detail-image {
+    min-height: 350px;
+    border-radius: 7px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-detail-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(7,26,53,0.7));
+}
+
+.service-detail-image span {
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.haulage-image {
+    background-image: url("images/haulage.jpg");
+}
+
+.logistics-image {
+    background-image: url("images/logistics.jpg");
+}
+
+.warehouse-image {
+    background-image: url("images/warehouse.jpg");
+}
+
+.procurement-image {
+    background-image: url("images/procurement.jpg");
+}
+
+.service-detail-content h2 {
+    font-size: 32px;
+    color: var(--navy);
+    margin-bottom: 18px;
+}
+
+.service-detail-content p {
+    color: var(--grey);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.service-detail-content ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.service-detail-content li {
+    color: var(--dark);
+    margin-bottom: 9px;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.cta-section {
+    padding: 90px 0;
+    background:
+        linear-gradient(rgba(7,26,53,0.92), rgba(7,26,53,0.95)),
+        url("images/highway-truck.jpg") center/cover no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.cta-content > span {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.cta-content h2 {
+    max-width: 750px;
+    margin: 15px auto;
+    font-size: clamp(27px, 4vw, 42px);
+    line-height: 1.3;
+}
+
+.cta-content p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    color: #d6deea;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BOOKING SECTION
+========================================= */
+
+.booking-section,
+.contact-section {
+    padding: 100px 0;
+    background: var(--light);
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.booking-info h2 {
+    color: var(--navy);
+    font-size: 35px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.booking-info > p {
+    color: var(--grey);
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.booking-benefit {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.booking-benefit > span {
+    color: var(--gold);
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.booking-benefit h3 {
+    color: var(--navy);
+    font-size: 16px;
+}
+
+.booking-benefit p {
+    color: var(--grey);
+    font-size: 12px;
+}
+
+.booking-contact {
+    margin-top: 35px;
+    background: var(--navy);
+    color: white;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.booking-contact h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.booking-contact p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.booking-form-wrapper,
+.contact-form-wrapper {
+    background: white;
+    padding: 38px;
+    border-radius: 7px;
+    box-shadow: 0 8px 35px rgba(0,0,0,0.05);
+}
+
+.form-heading h2,
+.contact-form-wrapper h2 {
+    color: var(--navy);
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.form-heading p,
+.contact-form-wrapper > p {
+    color: var(--grey);
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   FORM ELEMENTS
+========================================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    outline: none;
+    background: white;
+    color: var(--dark);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,164,76,0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--grey);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.consent-label input {
+    margin-top: 4px;
+    accent-color: var(--gold);
+}
+
+.form-submit {
+    width: 100%;
+}
+
+.form-message {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DEALERSHIP
+========================================= */
+
+.dealership-hero {
+    background:
+        linear-gradient(rgba(7,26,53,0.85), rgba(7,26,53,0.92)),
+        url("images/dealership-hero.jpg") center/cover no-repeat;
+}
+
+.dealership-hero .btn {
+    margin-top: 25px;
+}
+
+.vehicle-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    border: 1px solid var(--border);
+    background: white;
+    padding: 10px 22px;
+    border-radius: 4px;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.vehicle-card {
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-6px);
+}
+
+.vehicle-image {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    background: #e9edf2;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.vehicle-card:hover .vehicle-image img {
+    transform: scale(1.05);
+}
+
+.vehicle-tag {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 7px 13px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.vehicle-content {
+    padding: 27px;
+}
+
+.vehicle-content h3 {
+    color: var(--navy);
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.vehicle-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 12px;
+    color: var(--grey);
+    margin-bottom: 20px;
+}
+
+.vehicle-price {
+    color: var(--gold);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.vehicle-button {
+    width: 100%;
+}
+
+.vehicle-card[hidden] {
+    display: none;
+}
+
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 65px;
+}
+
+.contact-info-card {
+    background: white;
+    padding: 25px 18px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.contact-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.contact-info-card h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.contact-info-card p {
+    font-size: 12px;
+    color: var(--grey);
+    overflow-wrap: anywhere;
+}
+
+.contact-info-card a:hover {
+    color: var(--gold);
+}
+
+.contact-main-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.contact-side-panel {
+    background: var(--navy);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 6px;
+}
+
+.contact-side-panel h2 {
+    font-size: 29px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.contact-side-panel > p {
+    color: #cbd4e1;
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+.side-contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.side-contact-item > span {
+    font-size: 23px;
+}
+
+.side-contact-item h3 {
+    color: var(--gold);
+    font-size: 14px;
+}
+
+.side-contact-item p {
+    color: #e1e6ef;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.contact-side-panel .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   LOCATION / MAP
+========================================= */
+
+.location-section {
+    padding: 90px 0;
+    background: white;
+}
+
+.map-wrapper {
+    overflow: hidden;
+    border-radius: 7px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.map-wrapper iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #041225;
+    color: white;
+    padding-top: 70px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 1fr;
+    gap: 55px;
+    padding-bottom: 55px;
+}
+
+.footer-grid h2 {
+    color: var(--gold);
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.footer-grid h3 {
+    color: var(--gold);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-grid p {
+    color: #c3ccda;
+    font-size: 13px;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.footer-grid a {
+    display: block;
+    color: #c3ccda;
+    font-size: 13px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-grid a:hover {
+    color: var(--gold);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 22px 5%;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #9daabe;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN - TABLETS
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        gap: 13px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .nav-container {
+        min-height: 75px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5% 25px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 13px 8px;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar .nav-button {
+        margin-top: 12px;
+        text-align: center;
+        border: none;
+    }
+
+    .hero {
+        min-height: 590px;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-bottom {
+        gap: 15px;
+        font-size: 9px;
+        letter-spacing: 1px;
+        flex-wrap: wrap;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat-item h2 {
+        font-size: 30px;
+    }
+
+    .about-section,
+    .services-section,
+    .mission-section,
+    .values-section,
+    .booking-section,
+    .contact-section {
+        padding: 65px 0;
+    }
+
+    .about-grid,
+    .booking-grid,
+    .contact-main-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        min-height: 330px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 65px;
+    }
+
+    .service-detail.reverse .service-detail-image,
+    .service-detail.reverse .service-detail-content {
+        order: initial;
+    }
+
+    .service-detail-image {
+        min-height: 270px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        padding: 75px 0;
+    }
+
+    .vehicle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-image {
+        height: 230px;
+    }
+
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form-wrapper,
+    .contact-form-wrapper {
+        padding: 25px 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cta-section {
+        padding: 70px 0;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .logo-icon {
+        font-size: 24px;
+    }
+
+    .logo-text {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .stat-item h2 {
+        font-size: 26px;
+    }
+
+    .filter-btn {
+        padding: 9px 13px;
+    }
+
+}
+/* ==========================================
+   ICON CUSTOMER SUPPORT CHAT
+========================================== */
+
+.icon-chat-launcher {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    background: #071a35;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.icon-chat-launcher:hover {
+    background: #c9a44c;
+    color: #071a35;
+    transform: translateY(-3px);
+}
+
+.icon-chat-launcher span:first-child {
+    font-size: 21px;
+}
+
+.icon-chat-panel {
+    position: fixed;
+    right: 25px;
+    bottom: 95px;
+    z-index: 9999;
+    width: 350px;
+    max-width: calc(100vw - 30px);
+    height: 490px;
+    max-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    border: 1px solid #e5e5e5;
+}
+
+.icon-chat-panel[hidden],
+.icon-chat-launcher[hidden] {
+    display: none;
+}
+
+.icon-chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background: #071a35;
+    color: #ffffff;
+}
+
+.icon-chat-header div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.icon-chat-header strong {
+    font-size: 17px;
+}
+
+.icon-chat-header small {
+    color: #d6dce5;
+    font-size: 12px;
+}
+
+.icon-chat-header button {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.icon-chat-modes {
+    display: flex;
+    padding: 10px;
+    gap: 8px;
+    background: #f5f6f8;
+}
+
+.icon-chat-mode {
+    flex: 1;
+    padding: 10px 5px;
+    border: 1px solid #dce0e5;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #071a35;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.icon-chat-mode.active {
+    background: #c9a44c;
+    border-color: #c9a44c;
+    color: #071a35;
+}
+
+.icon-chat-messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f8f9fb;
+}
+
+.icon-chat-bubble {
+    max-width: 85%;
+    padding: 11px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.icon-chat-bubble.bot,
+.icon-chat-bubble.staff {
+    align-self: flex-start;
+    background: #ffffff;
+    color: #071a35;
+    border: 1px solid #e6e8ed;
+    border-bottom-left-radius: 3px;
+}
+
+.icon-chat-bubble.user {
+    align-self: flex-end;
+    background: #071a35;
+    color: #ffffff;
+    border-bottom-right-radius: 3px;
+}
+
+.icon-chat-status {
+    padding: 8px 14px;
+    background: #ffffff;
+    color: #777777;
+    font-size: 11px;
+    border-top: 1px solid #eeeeee;
+}
+
+.icon-chat-form {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+}
+
+.icon-chat-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 13px;
+}
+
+.icon-chat-form input:focus {
+    border-color: #c9a44c;
+}
+
+.icon-chat-form button {
+    width: 43px;
+    height: 43px;
+    border: none;
+    border-radius: 50%;
+    background: #c9a44c;
+    color: #071a35;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.icon-chat-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Mobile chat layout */
+
+@media (max-width: 480px) {
+    .icon-chat-launcher {
+        right: 15px;
+        bottom: 15px;
+        padding: 13px 16px;
+    }
+
+    .icon-chat-panel {
+        right: 10px;
+        bottom: 80px;
+        width: calc(100vw - 20px);
+        height: min(520px, calc(100dvh - 100px));
+    }
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.vehicle-card[hidden] {
+    display: none !important;
+}

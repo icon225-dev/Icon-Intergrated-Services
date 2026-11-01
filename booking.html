@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book ICON Integrated Services for logistics, haulage, warehousing and procurement.">
+    <title>Book a Service | ICON Integrated Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <strong>ICON</strong>
+            <span>
+                INTEGRATED SERVICES
+                <small>RC 615951 • EST. 2005</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="car-dealership.html">Car Dealership</a>
+            <a href="contact.html">Contact</a>
+            <a href="booking.html" class="active">Book Now</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Book Our Services</h1>
+            <p>Tell us what you need. Our team will get back to you.</p>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container booking-grid">
+            <div class="booking-form-wrapper">
+
+                <h2>Service Booking Form</h2>
+                <p>Complete the details below to submit your enquiry.</p>
+
+                <form id="bookingForm">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company"
+                                placeholder="Company name (optional)"
+                                autocomplete="organization">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email"
+                                placeholder="example@email.com"
+                                autocomplete="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone"
+                                placeholder="Enter phone number"
+                                autocomplete="tel" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Select Service *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Choose a service</option>
+                            <option value="logistics">Logistics</option>
+                            <option value="haulage">Haulage</option>
+                            <option value="warehousing">Warehousing</option>
+                            <option value="procurement">Procurement</option>
+                        </select>
+                    </div>
+
+                    <!-- LOGISTICS FIELDS -->
+                    <div class="service-fields" id="logisticsFields" hidden>
+                        <h3>Logistics Details</h3>
+
+                        <div class="form-group">
+                            <label for="pickup">Pickup Address *</label>
+                            <input type="text" id="pickup" name="pickup"
+                                placeholder="Where should we pick up the items?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destination">Delivery Address *</label>
+                            <input type="text" id="destination" name="destination"
+                                placeholder="Where should we deliver the items?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deliveryType">Delivery Type</label>
+                            <select id="deliveryType" name="deliveryType">
+                                <option value="">Select delivery type</option>
+                                <option value="Same-day delivery">Same-day delivery</option>
+                                <option value="Scheduled delivery">Scheduled delivery</option>
+                                <option value="Interstate delivery">Interstate delivery</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- HAULAGE FIELDS -->
+                    <div class="service-fields" id="haulageFields" hidden>
+                        <h3>Haulage Details</h3>
+
+                        <div class="form-group">
+                            <label for="goodsType">Type of Goods *</label>
+                            <input type="text" id="goodsType" name="goodsType"
+                                placeholder="Describe the goods">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="loadWeight">Estimated Load Weight</label>
+                                <input type="text" id="loadWeight" name="loadWeight"
+                                    placeholder="e.g. 10 tonnes">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="truckType">Vehicle Requirement</label>
+                                <select id="truckType" name="truckType">
+                                    <option value="">Select vehicle</option>
+                                    <option value="Flatbed truck">Flatbed truck</option>
+                                    <option value="Trailer">Trailer</option>
+                                    <option value="Container truck">Container truck</option>
+                                    <option value="Not sure">Not sure</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WAREHOUSING FIELDS -->
+                    <div class="service-fields" id="warehousingFields" hidden>
+                        <h3>Warehousing Details</h3>
+
+                        <div class="form-group">
+                            <label for="storageGoods">Goods to Be Stored *</label>
+                            <input type="text" id="storageGoods" name="storageGoods"
+                                placeholder="What goods do you want to store?">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="storageType">Storage Type</label>
+                                <select id="storageType" name="storageType">
+                                    <option value="">Select storage type</option>
+                                    <option value="General storage">General storage</option>
+                                    <option value="Temperature-controlled">Temperature-controlled</option>
+                                    <option value="Bulk storage">Bulk storage</option>
+                                    <option value="Not sure">Not sure</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="storageDuration">Storage Duration</label>
+                                <select id="storageDuration" name="storageDuration">
+                                    <option value="">Select duration</option>
+                                    <option value="Less than one month">Less than one month</option>
+                                    <option value="1–3 months">1–3 months</option>
+                                    <option value="3–6 months">3–6 months</option>
+                                    <option value="Over 6 months">Over 6 months</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROCUREMENT FIELDS -->
+                    <div class="service-fields" id="procurementFields" hidden>
+                        <h3>Procurement Details</h3>
+
+                        <div class="form-group">
+                            <label for="itemsRequired">Items Required *</label>
+                            <input type="text" id="itemsRequired" name="itemsRequired"
+                                placeholder="List the items you need">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="itemQuantity">Quantity Required</label>
+                            <input type="text" id="itemQuantity" name="itemQuantity"
+                                placeholder="Enter quantity">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specifications">Product Specifications</label>
+                            <input type="text" id="specifications" name="specifications"
+                                placeholder="Brand, size, quality or other requirements">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Service Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">General Quantity (if applicable)</label>
+                            <input type="text" id="quantity" name="quantity"
+                                placeholder="Enter quantity">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell us anything else we should know..."></textarea>
+                    </div>
+
+                    <label class="consent-label">
+                        <input type="checkbox" name="consent" required>
+                        I agree that ICON Integrated Services may contact me
+                        about this enquiry.
+                    </label>
+
+                    <button type="submit" class="btn btn-dark form-submit">
+                        Submit Booking Enquiry
+                    </button>
+
+                    <p id="bookingMessage" class="form-message"
+                        role="status" aria-live="polite"></p>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <h2>ICON</h2>
+            <p>INTEGRATED SERVICES</p>
+            <p>Your trusted partner for logistics, haulage, warehousing
+                and procurement solutions since 2005.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="booking.html">Book a Service</a>
+        </div>
+
+        <div>
+            <h3>Contact Us</h3>
+            <p>Ikeja, Lagos, Nigeria</p>
+            <p><a href="tel:+2349044019877">09044019877</a></p>
+            <p><a href="mailto:icon225@iconintergratedservices.org">
+                icon225@iconintergratedservices.org</a></p>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        <p>&copy; <span id="currentYear"></span> ICON Integrated Services.
+            All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const serviceSelect = document.getElementById("service");
+
+    const sections = {
+        logistics: document.getElementById("logisticsFields"),
+        haulage: document.getElementById("haulageFields"),
+        warehousing: document.getElementById("warehousingFields"),
+        procurement: document.getElementById("procurementFields")
+    };
+
+    const requiredFields = {
+        logistics: ["pickup", "destination"],
+        haulage: ["goodsType"],
+        warehousing: ["storageGoods"],
+        procurement: ["itemsRequired"]
+    };
+
+    function updateServiceFields() {
+        const selected = serviceSelect.value;
+
+        Object.entries(sections).forEach(([service, section]) => {
+            const isActive = service === selected;
+
+            section.hidden = !isActive;
+
+            section.querySelectorAll("input, select, textarea").forEach(field => {
+                field.disabled = !isActive;
+                field.required = isActive &&
+                    (requiredFields[service] || []).includes(field.name);
+            });
+        });
+    }
+
+    serviceSelect.addEventListener("change", updateServiceFields);
+    updateServiceFields();
+
+    const dateInput = document.getElementById("date");
+    const today = new Date();
+    const localDate = [
+        today.getFullYear(),
+        String(today.getMonth() + 1).padStart(2, "0"),
+        String(today.getDate()).padStart(2, "0")
+    ].join("-");
+
+    dateInput.min = localDate;
+
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+});
+</script>
+
+<script src="scripts.js"></script>
+<script src="chat-widget.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Python temporary files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# System files
+.DS_Store
+Thumbs.db

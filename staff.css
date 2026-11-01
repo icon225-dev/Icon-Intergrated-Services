@@ -1,0 +1,360 @@
+:root {
+    --staff-navy: #071a35;
+    --staff-navy-light: #102b50;
+    --staff-gold: #c9a44c;
+    --staff-white: #ffffff;
+    --staff-background: #f3f5f8;
+    --staff-text: #263449;
+    --staff-muted: #8290a3;
+    --staff-border: #e2e7ee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.staff-page {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--staff-background);
+    color: var(--staff-text);
+    font-family: Arial, sans-serif;
+}
+
+.staff-container {
+    min-height: 100vh;
+}
+
+/* LOGIN */
+
+.staff-login {
+    width: min(420px, calc(100% - 32px));
+    margin: 80px auto;
+    padding: 40px 32px;
+    background: var(--staff-white);
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(7, 26, 53, 0.09);
+}
+
+.staff-brand {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.staff-brand h1 {
+    margin: 0;
+    color: var(--staff-navy);
+    font-size: 42px;
+    letter-spacing: 5px;
+}
+
+.staff-brand p {
+    margin: 5px 0;
+    color: var(--staff-gold);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.staff-login h2 {
+    margin-bottom: 8px;
+    color: var(--staff-navy);
+    text-align: center;
+}
+
+.staff-login > p {
+    color: var(--staff-muted);
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.staff-login form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.staff-login label {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--staff-navy);
+}
+
+.staff-login input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--staff-border);
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+}
+
+.staff-login input:focus {
+    border-color: var(--staff-gold);
+}
+
+.staff-login button {
+    margin-top: 12px;
+    padding: 15px;
+    background: var(--staff-navy);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.staff-login button:hover {
+    background: var(--staff-navy-light);
+}
+
+#staffLoginMessage {
+    color: #b42318;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/* DASHBOARD */
+
+.staff-dashboard {
+    min-height: 100vh;
+}
+
+.staff-header {
+    min-height: 85px;
+    padding: 18px 30px;
+    background: var(--staff-navy);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.staff-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.staff-header p {
+    margin: 5px 0 0;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.staff-header button {
+    padding: 11px 20px;
+    background: var(--staff-gold);
+    color: var(--staff-navy);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* WORKSPACE */
+
+.staff-workspace {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: calc(100vh - 85px);
+}
+
+.staff-sidebar {
+    padding: 25px 18px;
+    background: white;
+    border-right: 1px solid var(--staff-border);
+}
+
+.staff-sidebar h2 {
+    margin-top: 0;
+    color: var(--staff-navy);
+    font-size: 19px;
+}
+
+#conversationList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.conversation-item {
+    width: 100%;
+    padding: 15px;
+    background: #f7f8fa;
+    border: 1px solid var(--staff-border);
+    border-radius: 7px;
+    text-align: left;
+    color: var(--staff-text);
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.conversation-item:hover,
+.conversation-item.active {
+    background: #fff9eb;
+    border-color: var(--staff-gold);
+}
+
+
+/* CHAT AREA */
+
+.staff-chat-area {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 25px;
+}
+
+.staff-chat-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--staff-border);
+}
+
+.staff-chat-heading h2 {
+    color: var(--staff-navy);
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+#staffConnectionStatus {
+    color: #16834a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.staff-messages {
+    flex: 1;
+    min-height: 350px;
+    max-height: 65vh;
+    overflow-y: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.staff-message {
+    max-width: 75%;
+    padding: 13px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.staff-message-customer {
+    align-self: flex-start;
+    background: white;
+    border: 1px solid var(--staff-border);
+}
+
+.staff-message-staff {
+    align-self: flex-end;
+    background: var(--staff-navy);
+    color: white;
+}
+
+
+/* REPLY FORM */
+
+.staff-reply-form {
+    display: flex;
+    gap: 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--staff-border);
+}
+
+.staff-reply-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid var(--staff-border);
+    border-radius: 7px;
+    outline: none;
+}
+
+.staff-reply-form input:focus {
+    border-color: var(--staff-gold);
+}
+
+.staff-reply-form button {
+    padding: 0 25px;
+    background: var(--staff-navy);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.staff-reply-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .staff-login {
+        margin: 45px auto;
+        padding: 30px 22px;
+    }
+
+    .staff-header {
+        padding: 16px;
+    }
+
+    .staff-header h1 {
+        font-size: 20px;
+    }
+
+    .staff-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--staff-border);
+    }
+
+    .staff-chat-area {
+        padding: 18px 14px;
+    }
+
+    .staff-messages {
+        min-height: 300px;
+    }
+
+    .staff-message {
+        max-width: 90%;
+    }
+
+    .staff-reply-form button {
+        padding: 0 16px;
+    }
+}
+
+
+/* ACCESSIBILITY */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

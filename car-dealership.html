@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Car Dealership | ICON Integrated Services</title>
+
+    <meta name="description" content="Explore vehicle listings from ICON Integrated Services. Contact our team for vehicle availability and enquiries.">
+
+    <meta name="theme-color" content="#071a35">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">ICON</span>
+                <span class="logo-text">
+                    INTEGRATED SERVICES
+                    <small>RC 615951 · EST. 2005</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="car-dealership.html" class="active">Car Dealership</a>
+                <a href="booking.html">Booking</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="nav-button">Contact Us</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="page-hero dealership-hero">
+        <div class="container">
+
+            <span class="hero-tag">ICON AUTOMOTIVE</span>
+
+            <h1>Find Your Next Vehicle.</h1>
+
+            <p>
+                Explore our vehicle listings and contact
+                our team for availability and enquiries.
+            </p>
+
+            <a href="#vehicles" class="btn btn-gold">
+                Explore Vehicles
+            </a>
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Car Dealership</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="services-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">ICON AUTOMOTIVE</span>
+
+                <h2>Explore Our Vehicle Collection</h2>
+
+                <p>
+                    Browse our featured vehicle catalogue.
+                    Contact our team to confirm availability,
+                    pricing and purchase arrangements.
+                </p>
+            </div>
+
+
+            <!-- VEHICLE FILTERS -->
+            <div class="vehicle-filters">
+
+                <button class="filter-btn active"
+                    data-filter="all">All Vehicles</button>
+
+                <button class="filter-btn"
+                    data-filter="suv">SUV</button>
+
+                <button class="filter-btn"
+                    data-filter="sedan">Sedan</button>
+
+                <button class="filter-btn"
+                    data-filter="luxury">Luxury</button>
+
+                <button class="filter-btn"
+                    data-filter="pickup">Pickup</button>
+
+            </div>
+
+
+            <!-- VEHICLE LISTINGS -->
+            <div class="vehicle-grid" id="vehicles">
+
+
+                <!-- VEHICLE 1 -->
+                <article class="vehicle-card" data-category="suv">
+
+                    <div class="vehicle-image">
+                        <img
+                            src="images/car-1.jpg"
+                            alt="Vehicle listing 1"
+                            loading="lazy">
+
+                        <span class="vehicle-tag">SUV</span>
+                    </div>
+
+                    <div class="vehicle-content">
+
+                        <span class="section-label">FEATURED VEHICLE</span>
+
+                        <h3>Vehicle Listing 01</h3>
+
+                        <div class="vehicle-specs">
+                            <span>Year: To be confirmed</span>
+                            <span>Transmission: To be confirmed</span>
+                            <span>Fuel: To be confirmed</span>
+                        </div>
+
+                        <p class="vehicle-price">
+                            Price on Request
+                        </p>
+
+                        <a href="contact.html"
+                           class="btn btn-dark vehicle-button">
+                            Enquire Now
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VEHICLE 2 -->
+                <article class="vehicle-card" data-category="sedan">
+
+                    <div class="vehicle-image">
+                        <img
+                            src="images/car-2.jpg"
+                            alt="Vehicle listing 2"
+                            loading="lazy">
+
+                        <span class="vehicle-tag">SEDAN</span>
+                    </div>
+
+                    <div class="vehicle-content">
+
+                        <span class="section-label">VEHICLE COLLECTION</span>
+
+                        <h3>Vehicle Listing 02</h3>
+
+                        <div class="vehicle-specs">
+                            <span>Year: To be confirmed</span>
+                            <span>Transmission: To be confirmed</span>
+                            <span>Fuel: To be confirmed</span>
+                        </div>
+
+                        <p class="vehicle-price">
+                            Price on Request
+                        </p>
+
+                        <a href="contact.html"
+                           class="btn btn-dark vehicle-button">
+                            Enquire Now
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VEHICLE 3 -->
+                <article class="vehicle-card" data-category="luxury">
+
+                    <div class="vehicle-image">
+                        <img
+                            src="images/car-3.jpg"
+                            alt="Vehicle listing 3"
+                            loading="lazy">
+
+                        <span class="vehicle-tag">LUXURY</span>
+                    </div>
+
+                    <div class="vehicle-content">
+
+                        <span class="section-label">PREMIUM COLLECTION</span>
+
+                        <h3>Vehicle Listing 03</h3>
+
+                        <div class="vehicle-specs">
+                            <span>Year: To be confirmed</span>
+                            <span>Transmission: To be confirmed</span>
+                            <span>Fuel: To be confirmed</span>
+                        </div>
+
+                        <p class="vehicle-price">
+                            Price on Request
+                        </p>
+
+                        <a href="contact.html"
+                           class="btn btn-dark vehicle-button">
+                            Enquire Now
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VEHICLE 4 -->
+                <article class="vehicle-card" data-category="pickup">
+
+                    <div class="vehicle-image">
+                        <img
+                            src="images/car-4.jpg"
+                            alt="Vehicle listing 4"
+                            loading="lazy">
+
+                        <span class="vehicle-tag">PICKUP</span>
+                    </div>
+
+                    <div class="vehicle-content">
+
+                        <span class="section-label">UTILITY VEHICLE</span>
+
+                        <h3>Vehicle Listing 04</h3>
+
+                        <div class="vehicle-specs">
+                            <span>Year: To be confirmed</span>
+                            <span>Transmission: To be confirmed</span>
+                            <span>Fuel: To be confirmed</span>
+                        </div>
+
+                        <p class="vehicle-price">
+                            Price on Request
+                        </p>
+
+                        <a href="contact.html"
+                           class="btn btn-dark vehicle-button">
+                            Enquire Now
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- DEALERSHIP CTA -->
+    <section class="cta-section">
+        <div class="container cta-content">
+
+            <span>LOOKING FOR A SPECIFIC VEHICLE?</span>
+
+            <h2>Let Us Know What You're Looking For.</h2>
+
+            <p>
+                Contact our team with your preferred
+                vehicle model and requirements.
+            </p>
+
+            <a href="contact.html" class="btn btn-gold">
+                Contact Our Team
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+                <h2>ICON</h2>
+                <p>INTEGRATED SERVICES</p>
+                <p>
+                    Your trusted partner for logistics,
+                    haulage, warehousing and procurement
+                    solutions since 2005.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="booking.html">Booking</a>
+                <a href="car-dealership.html">Car Dealership</a>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+                <p>Ikeja, Lagos, Nigeria</p>
+                <p>Phone: <a href="tel:+2349044019877"></a>09044019877</a></p>
+                <p>Email: <a href="mailto:icon225@iconintergratedservices.org">icon225@iconintergratedservices.org</a></p>
+                <a href="https://iconintegratedservices.org">
+                    iconintegratedservices.org
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 ICON Integrated Services.
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+     <script src="scripts.js"></script>
+     <script src="chat-widget.js"></script>
+
+</body>
+</html>

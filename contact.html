@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | ICON Integrated Services</title>
+
+    <meta name="description" content="Contact ICON Integrated Services in Ikeja, Lagos for haulage, logistics, warehousing and procurement enquiries.">
+
+    <meta name="theme-color" content="#071a35">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">ICON</span>
+                <span class="logo-text">
+                    INTEGRATED SERVICES
+                    <small>RC 615951 · EST. 2005</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="car-dealership.html">Car Dealership</a>
+                <a href="booking.html">Booking</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="booking.html" class="nav-button">Get a Quote</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+
+            <span class="hero-tag">WE'RE HERE TO HELP</span>
+
+            <h1>Contact ICON</h1>
+
+            <p>
+                Have a question or need a business solution?
+                Our team is ready to hear from you.
+            </p>
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Contact</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT INFORMATION -->
+    <section class="contact-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">GET IN TOUCH</span>
+                <h2>Let's Start a Conversation</h2>
+                <p>
+                    Reach out to us through any of our
+                    available contact channels.
+                </p>
+            </div>
+
+
+            <div class="contact-info-grid">
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Our Office</h3>
+                    <p>Ikeja, Lagos State, Nigeria</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>
+                        <a href="tel:+2349044019877">
+                            +234 904 401 9877
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Us</h3>
+                   <p>
+    <a href="mailto:icon225@iconintergratedservices.org">
+        icon225@iconintergratedservices.org
+    </a>
+</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">🌐</div>
+                    <h3>Our Website</h3>
+                    <p>
+                        <a href="https://iconintegratedservices.org">
+                            iconintegratedservices.org
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <div class="contact-main-grid">
+
+                <div class="contact-form-wrapper">
+
+                    <span class="section-label">SEND AN ENQUIRY</span>
+
+                    <h2>How Can We Help You?</h2>
+
+                    <p>
+                        Complete the form below and our team
+                        will get back to you.
+                    </p>
+
+                    <form id="contactForm">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    name="name"
+                                    placeholder="Your full name"
+                                    autocomplete="name"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number *</label>
+                                <input
+                                    type="tel"
+                                    id="contactPhone"
+                                    name="phone"
+                                    placeholder="Your phone number"
+                                    autocomplete="tel"
+                                    required>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                name="email"
+                                placeholder="Your email address"
+                                autocomplete="email"
+                                required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+
+                            <select
+                                id="contactSubject"
+                                name="subject"
+                                required>
+
+                                <option value="">Select an enquiry type</option>
+                                <option value="General Enquiry">General Enquiry</option>
+                                <option value="Haulage">Haulage</option>
+                                <option value="Logistics">Logistics</option>
+                                <option value="Warehousing">Warehousing</option>
+                                <option value="Procurement">Procurement</option>
+                                <option value="Vehicle Sales">Vehicle Sales</option>
+                                <option value="Partnership">Business Partnership</option>
+                                <option value="Other">Other</option>
+
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message *</label>
+
+                            <textarea
+                                id="contactMessage"
+                                name="message"
+                                rows="6"
+                                placeholder="Write your enquiry here..."
+                                required></textarea>
+                        </div>
+
+
+                        <label class="consent-label">
+                            <input type="checkbox" name="consent" required>
+                            I agree to be contacted regarding my enquiry.
+                        </label>
+
+
+                        <button type="submit" class="btn btn-dark form-submit">
+                            Send Message
+                        </button>
+
+                        <p id="contactMessageStatus"
+                           class="form-message"
+                           role="status"
+                           aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- CONTACT SIDE PANEL -->
+                <div class="contact-side-panel">
+
+                    <span class="section-label">ICON INTEGRATED SERVICES</span>
+
+                    <h2>We're Ready to Work With You.</h2>
+
+                    <p>
+                        From transportation to procurement,
+                        our team is available to discuss
+                        your business requirements.
+                    </p>
+
+                    <div class="side-contact-item">
+                        <span>📍</span>
+                        <div>
+                            <h3>Office Location</h3>
+                            <p>Ikeja, Lagos, Nigeria</p>
+                        </div>
+                    </div>
+
+                    <div class="side-contact-item">
+                        <span>📞</span>
+                        <div>
+                            <h3>Telephone</h3>
+                            <p><a href="tel:+2349044019877">+234 904 401 9877</a></p>
+                        </div>
+                    </div>
+
+                    <div class="side-contact-item">
+                        <span>✉️</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:icon225@iconintergratedservices.org">
+                                    icon225@iconintergratedservices.org
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <a
+                        href="https://wa.me/2349044019877?text=Hello%20ICON%20Integrated%20Services"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-gold">
+                        Contact Us on WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- LOCATION -->
+    <section class="location-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">FIND US</span>
+                <h2>Our Location</h2>
+                <p>
+                    Visit our office in Ikeja, Lagos.
+                </p>
+            </div>
+
+            <div class="map-wrapper">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Ikeja,Lagos,Nigeria&output=embed"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Map of Ikeja, Lagos">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+                <h2>ICON</h2>
+                <p>INTEGRATED SERVICES</p>
+                <p>
+                    Your trusted partner for logistics,
+                    haulage, warehousing and procurement
+                    solutions since 2005.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="booking.html">Booking</a>
+                <a href="car-dealership.html">Car Dealership</a>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+                <p>Ikeja, Lagos, Nigeria</p>
+                <p>Phone: <a href="tel:+2349044019877">09044019877</a></p>
+                <p>Email: <a href="mailto:icon225@iconintergratedservices.org">icon225@iconintergratedservices.org</a></p>
+                <a href="https://iconintegratedservices.org">
+                    iconintegratedservices.org
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 ICON Integrated Services.
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="scripts.js"></script>
+     <script src="chat-widget.js"></script>
+
+</body>
+</html>

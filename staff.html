@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Staff Dashboard | ICON Integrated Services</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="staff.css">
+</head>
+
+<body class="staff-page">
+
+    <main class="staff-container">
+
+        <!-- LOGIN SECTION -->
+        <section id="staffLogin" class="staff-login">
+
+            <div class="staff-brand">
+                <h1>ICON</h1>
+                <p>INTEGRATED SERVICES</p>
+            </div>
+
+            <h2>Staff Portal</h2>
+            <p>Sign in to access customer support.</p>
+
+            <form id="staffLoginForm">
+
+                <label for="staffUsername">Username</label>
+               <label for="staffReplyInput" class="sr-only">
+    Your reply
+</label>
+
+<input
+    type="text"
+    id="staffReplyInput"
+    name="message"
+    placeholder="Write a reply..."
+    maxlength="2000"
+    disabled
+    required
+>
+
+                <label for="staffPassword">Password</label>
+                <input
+                    type="password"
+                    id="staffPassword"
+                    name="password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit" id="staffLoginButton">
+                    Sign In
+                </button>
+
+                <p id="staffLoginMessage" role="status"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- DASHBOARD SECTION -->
+        <section id="staffDashboard" class="staff-dashboard" hidden>
+
+            <header class="staff-header">
+
+                <div>
+                    <h1>ICON Support</h1>
+                    <p>Staff Communication Centre</p>
+                </div>
+
+                <button id="staffLogoutButton" type="button">
+                    Log Out
+                </button>
+
+            </header>
+
+
+            <div class="staff-workspace">
+
+                <!-- CUSTOMER CONVERSATIONS -->
+                <aside class="staff-sidebar">
+
+                    <h2>Conversations</h2>
+
+                    <div id="conversationList">
+                        <p>Loading conversations...</p>
+                    </div>
+
+                </aside>
+
+
+                <!-- MESSAGE AREA -->
+                <section class="staff-chat-area">
+
+                    <div class="staff-chat-heading">
+                        <h2 id="selectedConversation">
+                            Select a conversation
+                        </h2>
+
+                        <span id="staffConnectionStatus">
+                            Not connected
+                        </span>
+                    </div>
+
+                    <div
+                        id="staffMessages"
+                        class="staff-messages"
+                        aria-live="polite"
+                    >
+                        <p>
+                            Select a customer conversation to view messages.
+                        </p>
+                    </div>
+
+                    <form id="staffReplyForm" class="staff-reply-form">
+
+                        <input
+                            type="text"
+                            id="staffReplyInput"
+                            placeholder="Write a reply..."
+                            maxlength="2000"
+                            disabled
+                            required
+                        >
+
+                        <button
+                            type="submit"
+                            id="staffReplyButton"
+                            disabled
+                        >
+                            Send
+                        </button>
+
+                    </form>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="staff.js"></script>
+
+</body>
+</html>
