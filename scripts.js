@@ -3,7 +3,7 @@
 // Main Website JavaScript
 // ==========================================
 
-const API_BASE_URL = "http://icon-intergrated-backend.onrender.com";
+const API_BASE_URL = "https://icon-intergrated-backend.onrender.com";
 
 let csrfToken = null;
 

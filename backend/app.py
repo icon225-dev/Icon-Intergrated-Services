@@ -601,7 +601,7 @@ def get_support_replies(conversation_id):
     connection = get_db()
 
     messages = connection.execute("""
-        SELECT id, message, created_at
+        SELECT id, sender, message, system_notice, created_at
         FROM support_messages
         WHERE conversation_id = ?
         AND sender = 'staff'
@@ -614,7 +614,9 @@ def get_support_replies(conversation_id):
         "messages": [
             {
                 "id": item["id"],
+                "sender": item["sender"],
                 "message": item["message"],
+                "system_notice": bool(item["system_notice"])
                 "created_at": item["created_at"]
             }
             for item in messages
