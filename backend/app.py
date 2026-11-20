@@ -616,7 +616,7 @@ def get_support_replies(conversation_id):
                 "id": item["id"],
                 "sender": item["sender"],
                 "message": item["message"],
-                "system_notice": bool(item["system_notice"])
+                "system_notice": bool(item["system_notice"]),
                 "created_at": item["created_at"]
             }
             for item in messages
